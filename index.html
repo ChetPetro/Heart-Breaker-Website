@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heart Breaker Challenge Website Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+
+    <!--Navigation Bar Start-->
+    <header>
+        <img class="logo" src="images/HeartBreakerLogoSmall.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="https://raceroster.com/events/2020/28459/heart-breaker-challenge-2020" target="_blank" >Register</a></li>
+                <li><a class="nomobile" href="faq.html">FAQ</a></li>
+                <li><a class="nomobile" href="about.html">About Us</a></li>
+                <li><a class="nomobile" href="obstacles.html">Obstacles</a></li>
+                <li><a class="nomobile" href="#">Sponsorship</a></li>
+                <li><a class="nomobile" href="#">Volunteer</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button class="contact_button">Contact</button></a>
+        <img id="hamburger" src="images/hamburgericon.png">
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">........
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a class="nomobile" href="faq.html">FAQ</a>
+                    <a class="nomobile" href="about.html">About Us</a>
+                    <a class="nomobile" href="obstacles.html">Obstacles</a>
+                    <a class="nomobile" href="#">Sponsorship</a>
+                    <a class="nomobile" href="#">Volunteer</a>
+        </div>
+            <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                  document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(e) {
+                  if (!e.target.matches('.dropbtn')) {
+                  var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                      myDropdown.classList.remove('show');
+                    }
+                  }
+                }
+            </script>
+        </div>
+    </header>
+    <div class="white_bar"></div>
+    <!--Navigation Bar End-->
+
+    <!--Image Slider Start-->
+    <div id="front_images">
+        <div class="slider">
+            <div class="slides">
+
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <div id="slide_image1"></div>
+                </div>
+                <div class="slide">
+                    <div id="slide_image2"></div>
+                </div>
+                <div class="slide">
+                    <div id="slide_image3"></div>
+                </div>
+                <div class="slide">
+                    <div id="slide_image4"></div>
+                </div>
+                <div class="slide">
+                    <div id="slide_image5"></div>
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+
+        </div>
+
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++
+        if(counter > 4){
+            counter = 1;
+        }
+    }, 5000);
+    </script>
+</div>
+
+<form class=banner name="count">
+    <textarea type="text" name="count2"> </textarea>
+</form>
+
+<script>
+
+
+    /*
+    Count down until any date script-
+    By JavaScript Kit (www.javascriptkit.com)
+    Over 200+ free scripts here!
+    */
+
+
+    //change the text below to reflect your own,
+    var before="THE CHALLENGE BEGINS!"
+    var current="GET READY FOR THE HEART BREAKRER CHALLENGE TODAY!"
+    var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+
+    function countdown(yr,m,d){
+    theyear=yr;themonth=m;theday=d
+    var today=new Date()
+    var todayy=today.getYear()
+    if (todayy < 1000)
+    todayy+=1900
+    var todaym=today.getMonth()
+    var todayd=today.getDate()
+    var todayh=today.getHours()
+    var todaymin=today.getMinutes()
+    var todaysec=today.getSeconds()
+    var todaystring=montharray[todaym]+" "+todayd+", "+todayy+" "+todayh+":"+todaymin+":"+todaysec
+    futurestring=montharray[m-1]+" "+d+", "+yr
+    dd=Date.parse(futurestring)-Date.parse(todaystring)
+    dday=Math.floor(dd/(60*60*1000*24)*1)
+    dhour=Math.floor((dd%(60*60*1000*24))/(60*60*1000)*1)
+    dmin=Math.floor(((dd%(60*60*1000*24))%(60*60*1000))/(60*1000)*1)
+    dsec=Math.floor((((dd%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1)
+    if(dday==0&&dhour==0&&dmin==0&&dsec==1){
+    document.forms.count.count2.value=current
+    return
+    }
+    else
+    document.forms.count.count2.value="ONLY "+dday+ " DAYS, "+dhour+" HOURS, "+dmin+" MINUTES, AND "+dsec+" SECONDS LEFT UNTIL "+before
+    setTimeout("countdown(theyear,themonth,theday)",1000)
+    }
+    //enter the count down date using the format year/month/day
+    var mytoday=new Date()
+    countdown(2022,05,25)
+</script>
+    <!--Image Slider End-->
+
+
+    <!--Content Grid Start-->
+    <div class="content_grid">
+        <div id="grid_title">
+            <h2 class="title">THE HEART BREAKER CHALLENGE</h1>
+        </div>
+        <div id="grid_image">
+        </div>
+        <div id="grid_desc">
+            <p class="grid_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo purus, facilisis quis lorem eget, eleifend eleifend libero. Sed et diam suscipit dui tristique iaculis. Pellentesque ac libero ut orci sodales molestie at et arcu. Quisque congue enim massa, vitae posuere libero sodales in. In id lectus venenatis, imperdiet nisi vitae, convallis tortor. Vestibulum sagittis augue sed ex consequat volutpat. Vestibulum fermentum felis eget varius luctus. Curabitur lorem erat, elementum auctor interdum sed, posuere scelerisque neque. Donec laoreet sapien ut varius viverra. Aenean fringilla metus in est volutpat, quis faucibus ipsum sollicitudin. Sed convallis libero vitae odio lobortis rutrum. Quisque eu convallis leo. Integer eleifend metus a mauris luctus tempor. Proin </p>
+        </div>
+        <div id="grid_main">
+            <p class="grid_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo purus, facilisis quis lorem eget, eleifend eleifend libero. Sed et diam suscipit dui tristique iaculis. Pellentesque ac libero ut orci sodales molestie at et arcu. Quisque congue enim massa, vitae posuere libero sodales in. In id lectus venenatis, imperdiet nisi vitae, convallis tortor. Vestibulum sagittis augue sed ex consequat volutpat. Vestibulum fermentum felis eget varius luctus. Curabitur lorem erat, elementum auctor interdum sed, posuere scelerisque neque. Donec laoreet sapien ut varius viverra. Aenean fringilla metus in est volutpat, quis faucibus ipsum sollicitudin. Sed convallis libero vitae odio lobortis rutrum. Quisque eu convallis leo. Integer eleifend metus a mauris luctus tempor. Proin ultricies porta dolor, eu tincidunt odio malesuada sit amet. Suspendisse quis augue nec neque sollicitudin bibendum a at urna.
+
+                Pellentesque posuere orci et massa lacinia varius. Donec at egestas ligula. Maecenas posuere nibh eu nulla lobortis, sed tempus nisl varius. Mauris in vehicula lectus, eget ullamcorper velit. Mauris quis auctor ante. In non sapien sit amet velit posuere porttitor. Vivamus ac dui leo. Suspendisse sed iaculis lectus. Nullam tincidunt, eros at bibendum porta, orci dui suscipit dui, id blandit turpis turpis sed neque. Morbi cursus enim elit, vitae aliquet felis cursus ac. Cras condimentum, urna accumsan commodo ornare, mauris tellus euismod lectus, sed efficitur justo purus nec nibh.</p>
+        </div>
+    </div>
+    <div id="video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JgOProtabI4" frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
+    <!--Content Grid End-->
+
+    <!--Sponsor Slider Start-->
+    <div id="sponsor_images">
+        <div class="slider-sponsor">
+            <div class="slides-sponsor">
+
+                <input type="radio" name="radio-btn-sponsor" id="radio1-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio2-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio3-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio4-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio5-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio6-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio7-sponsor">
+
+                <div class="slide first">
+                    <div id="sponsor_wrapper1">
+                        <h2 class="sub-title">PRESENTING SPONSOR:</h2>
+                        <div id="presenting_wrapper">
+                            <a href="https://reliancehomecomfort.com/toronto/" target="_blank"><img class="presenting" src="images/sponsors/presenting/RHC-New-logo.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper2">
+                        <h2 class="sub-title">DIAMOND SPONSORS:</h2>
+                        <div id="diamond_wrapper">
+                            <a href="https://www.caesars.com/caesars-windsor" target="_blank"><img class="diamond" src="images/sponsors/diamond/CW Cares Logo_gold.jpg"></a>
+                            <a href="https://www.aistechgroup.com/" target="_blank"><img class="diamond" src="images/sponsors/diamond/AIS_logo_CMYK.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper3">
+                        <h2 class="sub-title">SAPPHIRE SPONSORS:</h2>
+                        <div id="sapphire_wrapper1">
+                            <a href="https://mctaguelaw.com/" target="_blank"><img class="sapphire" src="images/sponsors/sapphire/McTague-Lawfirm-LLP.png"></a>
+                            <a href="https://www.atlastube.com/" target="_blank"><img id="atlas-tube" class="sapphire" src="images/sponsors/sapphire/AtlasTube_Logo.jpg"></a>
+                        </div>
+                        <div id="sapphire_wrapper2">
+                            <a href="https://www.frankbeer.ca/" target="_blank"><img class="sapphire" id="Frank" src="images/sponsors/sapphire/frank_logo_NEW.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper4">
+                        <h2 class="sub-title">MARKETING SPONSORS:</h2>
+                        <div id="marketing_wrapper">
+                            <a href="https://www.gomra.com/" target="_blank"><img class="marketing" id="MRA" src="images/sponsors/marketing/MRA_MainLogo.png"></a>
+                            <a href="https://axlefilms.com/" target="_blank"><img class="marketing" id="AXLE" src="images/sponsors/marketing/Axle_Logo_Wordmark.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper5">
+                        <h2 class="sub-title">OBSTACLE SPONSORS:</h2>
+                        <div id="obstacle_wrapper1">
+                            <a href="https://www.highlinemushrooms.com/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/highline mushrooms new.jpg"></a>
+                            <a href="https://robinsontrans.com/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/RobinsonTrucking.jpg"></a>
+                            <a href="https://thecarpentersunion.ca/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/Carpenters Union.png"></a>
+                        </div>
+                        <div id="obstacle_wrapper2">
+                            <a href="https://www.cocopaving.com/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/Coco Logo.jpg"></a>
+                        </div>
+                        <div id="obstacle_wrapper3">
+                            <a href="https://www.alignable.com/windsor-on/windsor-rubber-processing-ltd" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/WindsorRubberFBlogo.png"></a>
+                            <a href="https://targetsupply.com/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/Target.png"></a>
+                            <a href="https://www.conemo.com/clients/melvinorr/contact.html" target="_blank"><img id="melvinorr" class="obstacle" src="images/sponsors/obstacle/Melvin Orr Trucking Logo.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper6">
+                        <h2 class="sub-title">EVENT SPONSORS:</h2>
+                        <div id="event_wrapper1">
+                            <a href="https://www.wasteconnectionscanada.com/" target="_blank"><img class="event" src="images/sponsors/event/Waste Connections.png"></a>
+                            <a href="https://purewaterbrand.com/" target="_blank"><img class="event" src="images/sponsors/event/Purewater.logo.colour.web.jpg"></a>
+                            <a href="https://www.wfsltd.com/" target="_blank"><img class="event" src="images/sponsors/event/Windsor Factory Supply.png"></a>
+                            <a href="https://www.runningfactory.com/" target="_blank"><img class="event" src="images/sponsors/event/RunningFactory_Logo_BLUE.png"></a>        
+                        </div>
+                        <div id="event_wrapper2">
+                            <a href="https://www.downtownmission.com/" target="_blank"><img class="event" src="images/sponsors/event/DTM Logo.png"></a>
+                            <a href="http://www.michaelmele.com/" target="_blank"><img class="event" src="images/sponsors/event/DJMELE.png"></a>
+                            <a href="https://www.pensketruckrental.com/?gclid=CjwKCAjw3riIBhAwEiwAzD3TiXoItSPjLBSv-Bz-XadDVj6FKvsVaHUVdPJUk4tz8htf3sh3WYxnQBoCzjAQAvD_BwE" target="_blank"><img class="event" src="images/sponsors/event/Penske decal_page-0001.jpg"></a>
+                        </div>
+                        <div id="event_wrapper3">
+                            <a href="https://www.sccpr.com/" target="_blank"><img class="event" src="images/sponsors/event/SCCPR Black2.jpg"></a>
+                            <a href="https://www.liuna.ca/" target="_blank"><img class="event" src="images/sponsors/event/LiUNA.png"></a>
+                            <a href="https://www.facebook.com/pages/category/Plumbing-Service/Hello-Plumbing-1615352552023599/" target="_blank"><img class="event" src="images/sponsors/event/Hello Plumbing.png"></a>
+                            <a href="https://www.bonduelle.com/en/americas-long-life.html" target="_blank"><img class="event" src="images/sponsors/event/LOGO_BONDUELLE_SIGNATURE_HD.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper7">
+                        <h2 class="sub-title">MEDIA SPONSORS:</h2>
+                        <div id="media_wrapper1">
+                            <a href="https://www.iheartradio.ca/virginradio/windsor" target="_blank"><img class="media" src="images/sponsors/media/Virgin 93.9.png"></a>
+                            <a href="https://www.iheartradio.ca/purecountry/windsor" target="_blank"><img class="media" src="images/sponsors/media/pure country 89.png"></a>
+                        </div>
+                        <div id="media_wrapper2">
+                            <a href="https://www.iheartradio.ca/am800/" target="_blank"><img class="media" src="images/sponsors/media/AM800.png"></a>
+                            <a href="https://windsor.ctvnews.ca/" target="_blank"><img class="media" src="images/sponsors/media/CTV.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-auto-sponsor">
+                    <div class="auto-btn1-sponsor"></div>
+                    <div class="auto-btn2-sponsor"></div>
+                    <div class="auto-btn3-sponsor"></div>
+                    <div class="auto-btn4-sponsor"></div>
+                    <div class="auto-btn5-sponsor"></div>
+                    <div class="auto-btn6-sponsor"></div>
+                    <div class="auto-btn7-sponsor"></div>
+                </div>
+
+            </div>
+
+            <div class="navigation-manual-sponsor">
+                <label for="radio1-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio2-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio3-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio4-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio5-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio6-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio7-sponsor" class="manual-btn-sponsor"></label>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+    <script type="text/javascript">
+    var num = 1;
+    setInterval(function(){
+        document.getElementById('radio' + num + "-sponsor").checked = true;
+        num++
+        if(num > 7){
+            num = 1;
+        }
+    }, 5000);
+    </script> 
+    <!--Sponsor Slider End-->
+
+    <!--Footer Start-->
+    <div class="footer">
+        <div class="links_list">
+            <ul>
+                <li><a href="https://raceroster.com/events/2020/28459/heart-breaker-challenge-2020" target="_blank" >Register</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="obstacles.html">Obstacles</a></li>
+                <li><a href="#">Sponsorship</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Cources</a></li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <h2>2013 The Heart Breaker Challenge. All Rights Reserved. Click here to view our <a href="#" target="_blank">Privacy Policy</a></h2>
+            <h2>Designed By Chet Petro</h2>
+        </div>
+        <div class="social_media">
+            <a href="https://www.facebook.com/heartbreakerchallenge" target="_blank"><img src="images/socalmedia/Facebook.png"></a>
+            <a href="https://www.instagram.com/heartbreakerchallenge/#" target="_blank"><img src="images/socalmedia/instagram.png"></a>
+            <a href="https://www.youtube.com/user/HeartbreakerChalleng/feed" target="_blank"><img src="images/socalmedia/youtube.png"></a>
+        </div>
+    </div>
+    <!--Footer End-->
+</body>
+</html>

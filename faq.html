@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Heart Breaker Challenge Website Contact Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+</head>
+<body>
+    <!--Navigation Bar Start-->
+  <header>
+    <img class="logo" src="images/HeartBreakerLogoSmall.png" alt="logo">
+      <nav>
+          <ul class="nav_links">
+              <li><a class="nomobile" href="index.html">Homepage</a></li>
+              <li><a href="https://raceroster.com/events/2020/28459/heart-breaker-challenge-2020" target="_blank" >Register</a></li>
+              <li><a class="nomobile" href="faq.html">FAQ</a></li>
+              <li><a class="nomobile" href="about.html">About Us</a></li>
+              <li><a class="nomobile" href="obstacles.html">Obstacles</a></li>
+              <li><a class="nomobile" href="#">Sponsorship</a></li>
+              <li><a class="nomobile" href="#">Volunteer</a></li>
+          </ul>
+      </nav>
+      <a class="cta" href="contact.html"><button class="contact_button">Contact</button></a>
+    <img id="hamburger" src="images/hamburgericon.png">
+      <div class="navbar">
+          <div class="dropdown">
+              <button class="dropbtn" onclick="myFunction()">........
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                  <a class="nomobile" href="index.html">Homepage</a>
+                  <a class="nomobile" href="faq.html">FAQ</a>
+                  <a class="nomobile" href="about.html">About Us</a>
+                  <a class="nomobile" href="obstacles.html">Obstacles</a>
+                  <a class="nomobile" href="#">Sponsorship</a>
+                  <a class="nomobile" href="#">Volunteer</a>
+              </div>
+            <script>
+              /* When the user clicks on the button, 
+              toggle between hiding and showing the dropdown content */
+              function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+              }
+              
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(e) {
+                if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                  if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                  }
+                }
+              }
+          </script>
+      </div>
+  </header>
+  <div class="white_bar"></div>
+    <!--Navigation Bar End-->
+
+    <!--FAQ Start-->
+    <div class="faq_content">
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+        <h2 class="faq_question">Here is the question that is being asked</h2>
+        <p class="faq_answer">Here is the answer to the question that was asked above.</p>
+      
+    </div>
+    <!--FAQ End-->
+
+    <!--Footer Start-->
+    <div class="footer">
+      <div class="links_list">
+          <ul>
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="https://raceroster.com/events/2020/28459/heart-breaker-challenge-2020" target="_blank" >Register</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="obstacles.html">Obstacles</a></li>
+              <li><a href="#">Sponsorship</a></li>
+              <li><a href="#">Volunteer</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Cources</a></li>
+          </ul>
+      </div>
+      <div class="bottom">
+          <h2>2013 The Heart Breaker Challenge. All Rights Reserved. Click here to view our <a href="#" target="_blank">Privacy Policy</a></h2>
+          <h2>Designed By Chet Petro</h2>
+      </div>
+      <div class="social_media">
+          <a href="https://www.facebook.com/heartbreakerchallenge" target="_blank"><img src="images/socalmedia/Facebook.png"></a>
+          <a href="https://www.instagram.com/heartbreakerchallenge/#" target="_blank"><img src="images/socalmedia/instagram.png"></a>
+          <a href="https://www.youtube.com/user/HeartbreakerChalleng/feed" target="_blank"><img src="images/socalmedia/youtube.png"></a>
+      </div>
+  </div>
+  <!--Footer End-->
+  </body>
+</html>
