@@ -182,6 +182,7 @@ header {
     .title {
         font-size: 50px;
     }
+
 }
 
 @font-face {
@@ -859,7 +860,7 @@ header {
 
 /*FAQ Page Start*/
 .faq_content{
-    width: 550px;
+    width: 1000px;
     margin:auto;
     padding: 100px 0px 100px 0px;
 }
@@ -1168,15 +1169,17 @@ header {
     }
 }
 
+@media (max-width: 1000px){
+    .faq_content{
+        width: auto;
+        padding: 50px 50px 100px 100px;
+    }
+}
+
 
 @media (max-width: 600px) {
     .logo{
         display: none;
-    }
-
-    .faq_content{
-        width: auto;
-        padding: 100px 0px 100px 100px;
     }
 
     .obstacle_grid{
