@@ -944,6 +944,56 @@ header {
     color: rgb(53, 52, 52);
 }
 /*About Page End*/
+
+
+
+/*Sponsorship page start*/
+
+/* Create two equal columns that floats next to each other */
+.sponsor_grid{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    width: 1400px;
+    margin: auto;
+    padding: 10px 0px 100px 0px;
+}
+
+.sponsor_grid img{
+    padding: 0px 20px 20px 20px;
+}
+
+.sponsor_presenting{
+    height: 200px;
+}
+
+.sponsor_diamond{
+    height: 200px;
+}
+
+.sponsor_sapphire{
+    height: 160px;
+}
+
+.sponsor_marketing{
+    height: 160px;
+}
+
+.sponsor_obstacle{
+    height: 160px;
+}
+
+.sponsor_event{
+    height: 160px;
+}
+
+.sponsor_media{
+    height: 160px;
+}
+
+
+/*Sponsorship page end*/
+
 @media(max-width: 1400px){
     .content_grid{
         width: auto;
@@ -959,6 +1009,15 @@ header {
 
     .about_grid{
         width: auto;
+    }
+
+    .sponsor_grid{
+        width: auto;
+    }
+
+    .sponsor_grid img{
+        height: 100px;
+        padding: 0px 20px 20px 20px;
     }
 }
 
@@ -1385,4 +1444,10 @@ header {
         margin-right: 0%;
         margin-top: 7px
     }
+
+    .sponsor_grid img{
+        height: 70px;
+        padding: 0px 20px 20px 20px;
+    }
+
 }
