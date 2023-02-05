@@ -138,7 +138,7 @@ header {
     background-position: center;
     overflow: hidden;
     grid-area: photo;
-    background-image: url('images/gridImage.png');
+    background-image: url('images/hbcphotos/img9.jpg');
 }
 
 #grid_desc {
@@ -241,7 +241,7 @@ header {
 #slide_image1{
     height: 100vh;
     width: 100%;
-    background-image: url('images/slide1.png');
+    background-image: url('images/hbcphotos/img1.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -250,7 +250,7 @@ header {
 #slide_image2{
     height: 100vh;
     width: 100%;
-    background-image: url('images/slide2.png');
+    background-image: url('images/hbcphotos/img2.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -259,7 +259,7 @@ header {
 #slide_image3{
     height: 100vh;
     width: 100%;
-    background-image: url('images/slide3.png');
+    background-image: url('images/hbcphotos/img4.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -268,20 +268,12 @@ header {
 #slide_image4{
     height: 100vh;
     width: 100%;
-    background-image: url('images/slide4.png');
+    background-image: url('images/hbcphotos/img3.jpg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
 
-#slide_image5{
-    height: 100vh;
-    width: 100%;
-    background-image: url('images/slide4.png');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
 
 .slide div{
     width: 100%;
@@ -818,9 +810,10 @@ header {
 }
 
 .contact_photo{
-    height: 500px;
+    height: auto;
+    width: auto;
     grid-area: photo;
-    background-image: url('https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg');
+    background-image: url('images/HBC.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -890,6 +883,8 @@ header {
     padding: 100px 0px 100px 0px;
 }
 
+
+
 .about_heading{
     font-size: 50px;
     font-family: 'Lato', sans-serif;
@@ -924,6 +919,35 @@ header {
     width: 1400px;
     margin: auto;
     padding: 10px 0px 100px 0px;
+}
+
+.sponsor_grid_GIP{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    width: 1400px;
+    margin: auto;
+    padding: 10px 0px 0px 0px;
+}
+
+.sponsor_info{
+    width: 1000px;
+    margin:auto;
+    padding: 100px 0px 100px 0px;
+}
+
+.sponsor_text{
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(53, 52, 52);
+}
+
+.sponsor_name{
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(53, 52, 52);
 }
 
 .sponsor_grid img{
@@ -961,6 +985,28 @@ header {
 
 /*Sponsorship page end*/
 
+/*Volunteer page start*/
+.volunteer_grid{
+    width: 1000px;
+    margin:auto;
+    padding: 100px 0px 100px 0px;
+}
+
+.volunteer_text{
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(53, 52, 52); 
+}
+
+.volunteer_heading{
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(53, 52, 52);
+}
+
+
+/*Volunteer page end*/
+
 @media(max-width: 1400px){
     .content_grid{
         width: auto;
@@ -976,6 +1022,14 @@ header {
 
     .about_grid{
         width: auto;
+    }
+
+    .volunteer_grid{
+        width: auto;
+    }
+
+    .sponsor_info{
+        width:auto;
     }
 
     .sponsor_grid{
