@@ -20,7 +20,9 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="https://raceroster.com/events/2023/71989/the-heart-breaker-challenge" target="_blank" >Register</a></li>
+                <li><a class="nomobile" href="https://raceroster.com/events/2023/71989/the-heart-breaker-challenge/fundraising-organization/43252#event-description" target="_blank">Donate</a></li>
                 <li><a class="nomobile" href="faq.html">FAQ</a></li>
+                <li><a class="nomobile" href="photos2023.html">2023 Photos</a></li>
                 <li><a class="nomobile" href="obstacles.html">Obstacles</a></li>
                 <li><a class="nomobile" href="sponsorship.html">Sponsorship</a></li>
                 <li><a class="nomobile" href="volunteer.html">Volunteer</a></li>
@@ -34,7 +36,9 @@
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content" id="myDropdown">
+                    <a class="nomobile" href="https://raceroster.com/events/2023/71989/the-heart-breaker-challenge/fundraising-organization/43252#event-description" target="_blank">Donate</a>
                     <a class="nomobile" href="faq.html">FAQ</a>
+                    <a class="nomobile" href="photos2023.html">2023 Photos</a>
                     <a class="nomobile" href="obstacles.html">Obstacles</a>
                     <a class="nomobile" href="sponsorship.html">Sponsorship</a>
                     <a class="nomobile" href="volunteer.html">Volunteer</a>
@@ -110,6 +114,12 @@
     setInterval(function(){
         document.getElementById('radio' + counter).checked = true;
         counter++
+
+        document.querySelector('#radio1').addEventListener("click", function(event) {counter = 1;});
+        document.querySelector('#radio2').addEventListener("click", function(event) {counter = 2;});
+        document.querySelector('#radio3').addEventListener("click", function(event) {counter = 3;});
+        document.querySelector('#radio4').addEventListener("click", function(event) {counter = 4;});
+
         if(counter > 4){
             counter = 1;
         }
@@ -133,7 +143,7 @@
 
     //change the text below to reflect your own,
     var before="THE CHALLENGE BEGINS!"
-    var current="GET READY FOR THE HEART BREAKRER CHALLENGE TODAY!"
+    var current="THE HEART BREAKRER CHALLENGE!"
     var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
 
     function countdown(yr,m,d){
@@ -154,7 +164,7 @@
     dhour=Math.floor((dd%(60*60*1000*24))/(60*60*1000)*1)
     dmin=Math.floor(((dd%(60*60*1000*24))%(60*60*1000))/(60*1000)*1)
     dsec=Math.floor((((dd%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1)
-    if(dday==0&&dhour==0&&dmin==0&&dsec==1){
+    if(dday<0&&dhour<0&&dmin<0&&dsec<1){
     document.forms.count.count2.value=current
     return
     }
@@ -202,6 +212,7 @@
                 <input type="radio" name="radio-btn-sponsor" id="radio5-sponsor">
                 <input type="radio" name="radio-btn-sponsor" id="radio6-sponsor">
                 <input type="radio" name="radio-btn-sponsor" id="radio7-sponsor">
+                <input type="radio" name="radio-btn-sponsor" id="radio8-sponsor">
 
                 <div class="slide first">
                     <div id="sponsor_wrapper1">
@@ -217,6 +228,8 @@
                         <div id="diamond_wrapper">
                             <a href="https://www.caesars.com/caesars-windsor" target="_blank"><img class="diamond" src="images/sponsors/diamond/CW Cares Logo_gold.jpg"></a>
                             <a href="https://www.aistechgroup.com/" target="_blank"><img class="diamond" src="images/sponsors/diamond/AIS_logo_CMYK.jpg"></a>
+                            <a href="https://www.stclaircollege.ca/" target="_blank"><img class="diamond" src="images/sponsors/diamond/Stacked Logo  - STCLAIR.png"></a>
+                            <a href="https://www.stclaircollege.ca/alumni" target="_blank"><img class="diamond" src="images/sponsors/diamond/Alumni Logo 2018 CMYK Reverse (white stroke).png"></a>
                         </div>
                     </div>
                 </div>
@@ -231,6 +244,14 @@
                 </div>
                 <div class="slide-sponsor">
                     <div id="sponsor_wrapper4">
+                        <h2 class="sub-title">RUBY SPONSORS:</h2>
+                        <div id="ruby_wrapper">
+                            <a href="https://adine.ca/" target="_blank"><img class="ruby" src="images/sponsors/ruby/Adine Logo - jpg.jpg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-sponsor">
+                    <div id="sponsor_wrapper5">
                         <h2 class="sub-title">MARKETING SPONSORS:</h2>
                         <div id="marketing_wrapper">
                             <a href="https://www.gomra.com/" target="_blank"><img class="marketing" id="MRA" src="images/sponsors/marketing/MRA_MainLogo.png"></a>
@@ -240,7 +261,7 @@
                     </div>
                 </div>
                 <div class="slide-sponsor">
-                    <div id="sponsor_wrapper5">
+                    <div id="sponsor_wrapper6">
                         <h2 class="sub-title">OBSTACLE SPONSORS:</h2>
                         <div id="obstacle_wrapper1">
                             <a href="https://www.highlinemushrooms.com/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/highline mushrooms new.jpg"></a>
@@ -254,11 +275,12 @@
                             <a href="https://www.alignable.com/windsor-on/windsor-rubber-processing-ltd" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/WindsorRubberFBlogo.png"></a>
                             <a href="https://targetsupply.com/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/Target.png"></a>
                             <a href="https://lfxsupplycentre.com/" target="_blank"><img id="melvinorr" class="obstacle" src="images/sponsors/obstacle/LFX.png"></a>
+                            <a href="https://enwin.com/wuc-corporate-information/" target="_blank"><img class="obstacle" src="images/sponsors/obstacle/WUC Logo with text RGB.png"></a>
                         </div>
                     </div>
                 </div>
                 <div class="slide-sponsor">
-                    <div id="sponsor_wrapper6">
+                    <div id="sponsor_wrapper7">
                         <h2 class="sub-title">EVENT SPONSORS:</h2>
                         <div id="event_wrapper1">
                             <a href="https://www.wasteconnectionscanada.com/" target="_blank"><img class="event" src="images/sponsors/event/Waste Connections.png"></a>
@@ -273,7 +295,7 @@
                     </div>
                 </div>
                 <div class="slide-sponsor">
-                    <div id="sponsor_wrapper7">
+                    <div id="sponsor_wrapper8">
                         <h2 class="sub-title">MEDIA SPONSORS:</h2>
                         <div id="media_wrapper1">
                             <a href="https://www.iheartradio.ca/virginradio/windsor" target="_blank"><img class="media" src="images/sponsors/media/Virgin 93.9.png"></a>
@@ -294,6 +316,7 @@
                     <div class="auto-btn5-sponsor"></div>
                     <div class="auto-btn6-sponsor"></div>
                     <div class="auto-btn7-sponsor"></div>
+                    <div class="auto-btn8-sponsor"></div>
                 </div>
 
             </div>
@@ -306,6 +329,7 @@
                 <label for="radio5-sponsor" class="manual-btn-sponsor"></label>
                 <label for="radio6-sponsor" class="manual-btn-sponsor"></label>
                 <label for="radio7-sponsor" class="manual-btn-sponsor"></label>
+                <label for="radio8-sponsor" class="manual-btn-sponsor"></label>
             </div>
 
         </div>
@@ -317,8 +341,16 @@
     var num = 1;
     setInterval(function(){
         document.getElementById('radio' + num + "-sponsor").checked = true;
-        num++
-        if(num > 7){
+        num++;
+        document.querySelector('#radio1-sponsor').addEventListener("click", function(event) {num = 1;});
+        document.querySelector('#radio2-sponsor').addEventListener("click", function(event) {num = 2;});
+        document.querySelector('#radio3-sponsor').addEventListener("click", function(event) {num = 3;});
+        document.querySelector('#radio4-sponsor').addEventListener("click", function(event) {num = 4;});
+        document.querySelector('#radio5-sponsor').addEventListener("click", function(event) {num = 5;});
+        document.querySelector('#radio6-sponsor').addEventListener("click", function(event) {num = 6;});
+        document.querySelector('#radio7-sponsor').addEventListener("click", function(event) {num = 7;});
+        document.querySelector('#radio8-sponsor').addEventListener("click", function(event) {num = 8;});
+        if(num > 8){
             num = 1;
         }
     }, 5000);
@@ -331,6 +363,7 @@
             <ul>
                 <li><a href="https://raceroster.com/events/2023/71989/the-heart-breaker-challenge" target="_blank" >Register</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <li><a href="photos2023.html">2023 Photos</a></li>
                 <li><a href="obstacles.html">Obstacles</a></li>
                 <li><a href="sponsorship.html">Sponsorship</a></li>
                 <li><a href="volunteer.html">Volunteer</a></li>
